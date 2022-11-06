@@ -1,34 +1,56 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Web Application.
+This is the Frontend part of the assignment.
 
 ## Getting Started
 
-First, run the development server:
+The frontend part runs on custom port 8080.
+
+To run the application, first install the dependencies by:
 
 ```bash
-npm run dev
+npm install
 # or
-yarn dev
+yarn install
+```
+Then, build the application.
+
+```bash
+npm run build
+# or
+yarn build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+To start the server, run
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+```bash
+npm start
+# or
+yarn start
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+NOTE: The backend service must run before starting the frontend.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Frameworks
 
-## Learn More
+### Application framework
+The frontend is using NextJS / ReactJS with server side rendering. 
 
-To learn more about Next.js, take a look at the following resources:
+The Places data are rendered on the client side (browsers), since in real-life 
+application these kind of data are usually dynamic. 
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The data is fetched using [SWR React Hook](https://swr.vercel.app/), with a simple REST API.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+As it is only a simple a application, no State Management library is needed.
 
-## Deploy on Vercel
+### UI Framework
+The application uses [Mantine React component library](https://mantine.dev/). It has built-in,
+customisable, easy-to-use and flexible configuration systems.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## References
+Built from scratch by referencing to:
+- NextJS "Getting started" and documentation
+- Mantine component library documentation
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+I have both of these in my previous work, 100% with Typescript and GraphQL (Apollo client), and .
+
+Estimated time taken: ~2 Hours including time for reading the latest updates.
